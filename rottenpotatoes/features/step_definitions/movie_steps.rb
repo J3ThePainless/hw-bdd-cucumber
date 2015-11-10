@@ -26,18 +26,19 @@ When /I (un)?check the following ratings: (.*)/ do |uncheck, rating_list|
   #   iterate over the ratings and reuse the "When I check..." or
   #   "When I uncheck..." steps in lines 89-95 of web_steps.rb
   rating_list.split.each do |checkbox|
-    if uncheck
-      step "I uncheck #{checkbox}"
+    if uncheck == "uncheck"
+      step %Q{I uncheck "#{checkbox}"}
     else
-      step "I check #{checkbox}"
+      step %Q{I check "#{checkbox}"}
     end
   end
 end
 
 Then /I should see all the movies/ do
   # Make sure that all the movies in the app are visible in the table
-  step "I should see G"
-  step "I should see PG"
-  step "I should see PG-13"
-  step "I should see R"
+  step %Q{I should see ratings_G}
+  step %Q{I should see ratings_PG}
+  step %Q{I should see ratings_PG-13}
+  step %Q{I should see ratings_R}
+  step %Q{I shoudl see ratings_NC-17}
 end
