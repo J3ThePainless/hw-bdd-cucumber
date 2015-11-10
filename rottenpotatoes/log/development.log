@@ -556,3 +556,25 @@ Started GET "/assets/application.self.js?body=1" for ::1 at 2015-07-23 13:57:16 
   [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (8.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120130161449')
   [1m[36m (8.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+
+
+Started GET "/assets/rails.png" for 152.15.113.6 at 2015-11-10 16:36:42 +0000
+
+
+Started GET "/movies" for 152.15.113.6 at 2015-11-10 16:36:46 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (32.1ms)
+Completed 200 OK in 218ms (Views: 187.9ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.self.css?body=1" for 152.15.113.6 at 2015-11-10 16:36:47 +0000
+
+
+Started GET "/assets/jquery.self.js?body=1" for 152.15.113.6 at 2015-11-10 16:36:47 +0000
+
+
+Started GET "/assets/jquery_ujs.self.js?body=1" for 152.15.113.6 at 2015-11-10 16:36:47 +0000
+
+
+Started GET "/assets/application.self.js?body=1" for 152.15.113.6 at 2015-11-10 16:36:47 +0000
