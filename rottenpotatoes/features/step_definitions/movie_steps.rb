@@ -53,6 +53,6 @@ end
 
 And /I will see no movies with the ratings: (.*)/ do |rating_list|
     rating_list.split.each do |movie|
-      step %Q{I should see "#{movie}"}
+      step %Q{I should not see "#{movie}"}
     end
 end
