@@ -22,8 +22,11 @@ Background: movies have been added to database
   And I am on the RottenPotatoes home page
 
 Scenario: sort movies alphabetically
-  When I follow "Movie Title"
+  When I click link title_header
   # your steps here
+  Then I should see "Aladdin" before "Raiders of the Lost Ark"
 Scenario: sort movies in increasing order of release date
-  When I follow "Release Date"
+  When I click link release_date_header
   # your steps here
+  Then I should see "Raiders of the Lost Ark" before "Aladdin"
+
